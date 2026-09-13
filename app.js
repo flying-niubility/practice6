@@ -92,4 +92,9 @@ window.addEventListener('resize', () => {
   if (barChart) barChart.resize();  // Chart.js响应式默认自动处理，无需手动
 });
 
+// 事件委托：jQuery内置写法，给卡片加点击高亮
+$('#cards').on('click', '.card', function () {
+  $(this).toggleClass('border-primary shadow');
+});
+
 loadData();
